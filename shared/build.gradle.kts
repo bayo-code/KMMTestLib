@@ -7,6 +7,9 @@ plugins {
 group = "com.bayocode.kmmtestlib"
 version = "0.0.1"
 
+val githubProperties = Properties()
+githubProperties.load(project.rootProject.file("github.properties").inputStream())
+
 kotlin {
     android {
         publishLibraryVariants("release", "debug")
@@ -74,8 +77,8 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/bayo-code/KMMTestLib")
             credentials {
-                username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
-                password = project.findProperty("gpr.key") as String? ?: System.getenv("TOKEN")
+                username = githubProperties["gpr.user"] as String? ?: System.getenv("GPR_USER")
+                password = githubProperties["gpr.key"] as String? ?: System.getenv("GPR_KEY")
             }
         }
     }
