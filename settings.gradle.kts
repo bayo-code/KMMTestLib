@@ -14,4 +14,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "KMMTestLib"
-include(":shared")
+include(":sdk")

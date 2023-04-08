@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
@@ -5,7 +7,7 @@ plugins {
 }
 
 group = "com.bayocode.kmmtestlib"
-version = "0.0.1"
+version = "1.1.0"
 
 val githubProperties = Properties()
 githubProperties.load(project.rootProject.file("github.properties").inputStream())
@@ -28,7 +30,7 @@ kotlin {
         iosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
-            baseName = "shared"
+            baseName = "sdk"
         }
     }
 
@@ -82,12 +84,4 @@ publishing {
             }
         }
     }
-//    publications {
-//        register<MavenPublication>("gpr") {
-//            groupId = "com.bayocode.kmmtestlib"
-//            artifactId = "sdk"
-//            version = "0.0.1"
-//            artifact("$buildDir/outputs/aar/kmmtestlib-release.aar")
-//        }
-//    }
 }
