@@ -1,3 +1,4 @@
+import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
 import java.util.Properties
 
 plugins {
@@ -23,6 +24,8 @@ kotlin {
             }
         }
     }
+
+    val xcFramework = XCFramework()
     
     listOf(
         iosX64(),
@@ -30,7 +33,7 @@ kotlin {
         iosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
-            baseName = "sdk"
+            xcFramework.add(this)
         }
     }
 
