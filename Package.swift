@@ -20,7 +20,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .binaryTarget(
             name: "KMMLib",
-            url: "https://github.com/bayo-code/KMMTestLib/blob/main/sdk.xcframework.zip",
+            url: "https://github.com/bayo-code/KMMTestLib/raw/main/sdk.xcframework.zip",
             checksum: "42aadc92c512cbdf2c51ab850b51e02da03854a02c558b93c5ab33a73bfee461"
         ),
     ]
