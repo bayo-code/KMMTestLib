@@ -21,7 +21,7 @@ let package = Package(
         .binaryTarget(
             name: "KMMLib",
             url: "https://github.com/bayo-code/KMMTestLib/blob/main/sdk.xcframework.zip",
-            checksum: "c1401834c159728a8a5163fd061b9fdb71a6ddbd28d5022df50a003f4987ad5f"
+            checksum: "42aadc92c512cbdf2c51ab850b51e02da03854a02c558b93c5ab33a73bfee461"
         ),
     ]
 )
